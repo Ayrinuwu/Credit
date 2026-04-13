@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+.header-top{
+    padding-top: 26.72px;
+    padding-left: 275px;
+    padding-right: 276px;
+}
+
+.header-top__container{
+    max-width: 1352px;
+    margin-inline: auto;
+}
+
+.header-top__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top__list{
+    display: flex;
+    gap: 23px;
+}
+.line{
+    padding-top: 18.72px;
+}
+
+.line__container{
+    max-width: 1352px;
+    margin-inline: auto;
+}
+
+.line__nav{
+    display: flex;
+}
+
+.header-bottom{
+    padding-top: 20.28px;
+    padding-left: 275px;
+    padding-right: 276px;
+}
+
+.header-bottom__container{
+    max-width: 1369px;
+    margin-inline: auto;
+}
+
+.header-bottom__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bottom__list{
+    display: flex;
+    list-style: none;
+    gap: 23px;
+}
+
+.header-bottom__list-link{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #9C9C9C;
+}
+
+.header-bottom__list-link.active{
+    color: #0138F9;
+    transition: color 0.3s;
+}
+
+.header-bottom__list-link:hover{
+    color:#0138F9;
+}
+a {
+    text-decoration: none;
+}
+
+.header__button{
+    font-weight: 600;
+    color: white;
+    padding-left: 87.14px;
+    padding-right: 85.36px;
+    padding-top: 15.88px;
+    padding-bottom: 15.25px;
+    background-color: #1521CF;
+    border-radius: 64px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 5px #9C9C9C;
+    transition: box-shadow 0.3s ease;
+}
+.header__button:hover{
+    opacity: 70%;
+    box-shadow: 0px 6px 15px #9C9C9C;
+}
+.hero{
+    padding-block: 106px;
+}
+.hero__container{
+    position: relative;
+}
+.hero__card{
+    padding-left: 345px;
+}
+.hero__image{
+    position: absolute;
+    top: 160px;
+    right: 322px;
+}
+.hero__buttons{
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    padding-left: 353px;
+    padding-top: 272px;
+}
+.hero__button{
+    font-weight: 600;
+    color: #1521CF;
+    border: 1px solid #1521CF;
+    padding: 15px 77px;
+    border-radius: 64px;
+    transition: 0.5s;
+}
+.hero__button:hover{
+    opacity: 40%;
+}
