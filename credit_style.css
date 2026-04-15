@@ -6,6 +6,8 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    color: #DEDDDD;
+    font-weight: 600;
     min-height: 100vh;
 }
 
@@ -95,76 +97,93 @@ a {
     text-decoration: none;
 }
 
-.header__button{
-    font-weight: 600;
-    color: white;
-    padding-left: 4.54vw;       /* 87.14px / 1920px * 100 = 4.54vw */
-    padding-right: 4.45vw;      /* 85.36px / 1920px * 100 = 4.45vw */
-    padding-top: 1.54vh;        /* 15.88px / 1034px * 100 = 1.54vh */
-    padding-bottom: 1.47vh;     /* 15.25px / 1034px * 100 = 1.47vh */
-    background-color: #1521CF;
-    border-radius: 64px;
-    transition: 0.3s;
-    box-shadow: 0px 4px 5px #9C9C9C;
-    white-space: nowrap;
-    font-size: clamp(12px, 0.83vw, 16px);
-}
-
-.header__button:hover{
-    opacity: 70%;
-    box-shadow: 0px 6px 15px #9C9C9C;
-}
-
-.hero{
-    padding-block: 10.25vh;     /* 106px / 1034px * 100 = 10.25vh */
-}
-
-.hero__container{
-    
+.background{
     position: relative;
-    min-height: 60vh;
+    width: 70.36vw;      /* 1351px / 1920px * 100 = 70.36vw */
+    margin-top: 15.86vh;
+    margin-left: 14.43vw;  /* 277px / 1920px * 100 = 14.43vw */
+    margin-right: 15.21vw; /* 292px / 1920px * 100 = 15.21vw */
+    padding-bottom: 3.97vh;
+    background-color: #F5F5F5;
 }
 
-.hero__card{
-    padding-top: 33.75vh;
-    padding-left: 17.97vw;      /* 345px / 1920px * 100 = 17.97vw */
-    padding-right: 61.46vw;     /* 1180px / 1920px * 100 = 61.46vw */
-}
-
-.hero__card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.hero__image{
-    position: absolute;
-    top: 24.18vh;              
-    right: 16.77vw;            /* 322px / 1920px * 100 = 16.77vw */
-    max-width: 35%;
-    height: auto;
-}
-
-.hero__buttons{
+.forms {
+    padding-top: 5.71vh;
+    padding-left:5.42vw;
     display: flex;
-    list-style: none;
-    gap: 2.34vw;               /* 45px / 1920px * 100 = 2.34vw */
-    padding-left: 18.39vw;      /* 353px / 1920px * 100 = 18.39vw */
-    padding-top: 26.31vh;       /* 272px / 1034px * 100 = 26.31vh */
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero__button{
-    font-weight: 600;
-    color: #1521CF;
-    border: 1px solid #1521CF;
-    padding: 1.45vh 4.01vw;    /* 15px/1034px=1.45vh, 77px/1920px=4.01vw */
-    border-radius: 64px;
-    transition: 0.5s;
+.forms input {
+    width: 22.29vw;      
+    height: 3.38vh;      
+    padding: 0 2.45vw;   
+    border-radius: 3.33vw; 
+    border: 1px solid #DEDDDD;
     font-size: clamp(12px, 0.83vw, 16px);
-    white-space: nowrap;
+    color: #DEDDDD;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-.hero__button:hover{
-    opacity: 40%;
+.forms p {
+    margin-bottom: 0.97vh; 
+    margin-top: 3.58vh;
+    font-size: clamp(12px, 0.83vw, 15px);
 }
 
+.forms p::after {
+    content: "*";
+    color: #FF0000;
+}
+
+.discription p {
+    margin-left:5.42vw;
+    color: #FF0000;
+    font-size: clamp(8px, 0.63vw, 10px); 
+    margin-top: 0.77vh;
+    margin-bottom: 4.16vh; 
+}
+
+.agreements {
+    margin-left:5.42vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+}
+
+.agreements label{
+    font-size: clamp(8px, 0.63vw, 10px);
+}
+
+.agreements input[type="checkbox"] {
+    margin-right: 0.26vw;
+    width: auto;
+    height: auto;
+    transform: scale(1);
+}
+
+.agreements label:first-child::after {
+    content: "*";
+    color: #FF0000;
+}
+
+button {
+    background-color: #1521CF;
+    color: white;
+    border: none;
+    padding-left: 1.67vw;       
+    padding-right: 1.67vw;     
+    padding-top: 1.55vh;        
+    padding-bottom: 1.55vh;     
+    border-radius: 3.33vw; 
+    font-size: clamp(12px, 0.83vw, 16px);
+    margin-top: 7.16vh; 
+    margin-left:5.42vw;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 70%;
+}
