@@ -187,3 +187,56 @@ button {
 button:hover {
     opacity: 70%;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    margin-left: 36.25vw;
+    margin-right: 31.41vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 3.33vw;
+    border: 1px solid #1521CF;
+}
+
+.modal-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.51vw; 
+    padding-left: 2.45vw;
+    padding-top: 6.96vh; 
+    padding-right: 4.27vw;
+    padding-bottom: 6.67vh;
+}
+
+.modal-text-wrapper {
+    flex: 1;
+    max-width: 19.38vw;
+}
+
+.modal-title {
+    color: #1521CF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: clamp(12px, 0.83vw, 15px);
+}

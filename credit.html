@@ -81,10 +81,54 @@
                     согласен на рассылку
                     </label>
                 </div>
-                <button>
+                <button type="button">
                     Оформить
                 </button>
         </div>
+    
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <img src="images/Operation_ok.svg" class="modal-icon">
+                    <div class="modal-text-wrapper">
+                        <p class="modal-title">Заявка оформлена</p>
+                        <p class="modal-title">Банк рассмотрит заявление в течение 1 рабочего дня</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Находим кнопку "Оформить"
+                const submitButton = document.querySelector('button');
+                const modal = document.getElementById('modal');
+                
+                // Проверяем, что кнопка и модальное окно существуют
+                if (submitButton && modal) {
+                    submitButton.addEventListener('click', function(event) {
+                        // Если кнопка внутри формы и нужно предотвратить отправку
+                        // event.preventDefault();
+                        
+                        // Показываем модальное окно
+                        modal.classList.add('show');
+                        
+                        // Устанавливаем таймер на 10 секунд для скрытия
+                        setTimeout(function() {
+                            modal.classList.remove('show');
+                        }, 10000); // 10000 миллисекунд = 10 секунд
+                    });
+                }
+
+            });
+
+                if (modal) {
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === modal) {
+                            modal.classList.remove('show');
+                        }
+                    });
+                }
+        </script>
 </body>
 </html>
