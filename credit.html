@@ -81,7 +81,7 @@
                     согласен на рассылку
                     </label>
                 </div>
-                <button type="button">
+                <button type="submit">
                     Оформить
                 </button>
         </div>
@@ -105,6 +105,7 @@
                 
                 if (submitButton && modal) {
                     submitButton.addEventListener('click', function(event) {
+                        event.preventDefault();
                         modal.classList.add('show');
                         setTimeout(function() {
                             modal.classList.remove('show');}, 10000); 
