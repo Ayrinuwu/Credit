@@ -98,28 +98,6 @@
             </div>
         </div>
     </main>
-    <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const submitButton = document.querySelector('button');
-                const modal = document.getElementById('modal');
-                
-                if (submitButton && modal) {
-                    submitButton.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        modal.classList.add('show');
-                        setTimeout(function() {
-                            modal.classList.remove('show');}, 10000); 
-                    });
-                }
-
-            });
-                if (modal) {
-                    modal.addEventListener('click', function(e) {
-                        if (e.target === modal) {
-                            modal.classList.remove('show');
-                        }
-                    });
-                }
-        </script>
+    <script src="credit.js"></script>
 </body>
 </html>
