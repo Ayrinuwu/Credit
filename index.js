@@ -95,12 +95,14 @@ window.updateCardDisplay = function() {
     if (!cardDetails) return;
     
     if (window.currentUser && window.currentUser.card) {
-        if (cardBalance) cardBalance.textContent = `${window.currentUser.card.currency}${window.currentUser.card.balance.toLocaleString()}`;
+        if (cardBalance) cardBalance.textContent = `${window.currentUser.card.balance.toLocaleString()} ${window.currentUser.card.currency}`;
         if (cardNumber) cardNumber.textContent = window.currentUser.card.number;
         if (cardExpiry) cardExpiry.textContent = window.currentUser.card.expiryDate;
         cardDetails.style.display = 'flex';
+        console.log('Карта отображена');
     } else {
         cardDetails.style.display = 'none';
+        console.log('Карта скрыта');
     }
 };
 
@@ -134,11 +136,9 @@ window.openLoginModal = function() {
         
         const loginInput = document.getElementById('loginInput');
         const passwordInput = document.getElementById('passwordInput');
-        const rememberCheckbox = document.getElementById('rememberMe');
         
         if (loginInput) loginInput.value = '';
         if (passwordInput) passwordInput.value = '';
-        if (rememberCheckbox) rememberCheckbox.checked = false;
         
         console.log('Модальное окно открыто');
     } else {
@@ -195,16 +195,14 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Форма отправлена');            
             const loginInput = document.getElementById('loginInput');
             const passwordInput = document.getElementById('passwordInput');
-            const rememberCheckbox = document.getElementById('rememberMe');
             
             const loginValue = loginInput ? loginInput.value.trim() : '';
             const passwordValue = passwordInput ? passwordInput.value.trim() : '';
-            const rememberMe = rememberCheckbox ? rememberCheckbox.checked : false;
             
             console.log('Введенные данные:', loginValue, passwordValue);
             
             if (loginValue && passwordValue) {
-                const success = window.login(loginValue, passwordValue, rememberMe);
+                const success = window.login(loginValue, passwordValue, false);
                 
                 if (success) {
                     window.closeLoginModal();
