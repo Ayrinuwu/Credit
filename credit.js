@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const submitButton = document.querySelector('button[type="submit"]');

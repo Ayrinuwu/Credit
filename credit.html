@@ -16,10 +16,16 @@
         <div class="header-top">
             <div class= "header-top__container">
                 <nav class="header-top__nav">
-                    <img src="images/Personal_Acc.svg" alt="">
+                    <div class="user-info">
+                        <img src="images/Acc.svg" alt="">
+                        <span class="user-name">Имя Фамилия</span>
+                    </div>
                     <ul class="header-top__list">
                         <img src="images/Contact.svg" alt="">
-                        <img src="images/login.svg" alt="">
+                        <div class="login">
+                            <img src="images/Vector.svg" alt="">
+                            <button type="button" class="auth-button">Вход</button>
+                        </div>
                     </ul>
                 </nav>
             </div>
@@ -54,7 +60,7 @@
 
     <main>
         <div class="background">
-            <form action="" method="post">
+            <form class="credit-form">
                 <div class="forms">
                     <p>Сумма</p>
                     <input type="text" placeholder="Введите сумму">
@@ -81,7 +87,8 @@
                     согласен на рассылку
                     </label>
                 </div>
-                <button type="submit">
+            </form>
+                <button type="submit" class="credit-button">
                     Оформить
                 </button>
         </div>
@@ -98,6 +105,29 @@
             </div>
         </div>
     </main>
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <h3>Вход в личный кабинет</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginInput">Логин</label>
+                    <input type="text" id="loginInput" placeholder="Введите логин" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="passwordInput">Пароль</label>
+                    <input type="password" id="passwordInput" placeholder="Введите пароль" required>
+                </div>
+                
+                <button type="submit" class="login-submit-btn">Войти</button>
+            </form>
+        </div>
+    </div> 
+    <script src="index.js"></script>   
     <script src="credit.js"></script>
 </body>
 </html>
