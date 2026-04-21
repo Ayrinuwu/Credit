@@ -39,7 +39,7 @@ const CLIENTS_DB = [
 
 window.currentUser = null;
 
-window.login = function(loginValue, passwordValue, rememberMe = false) {
+window.login = function(loginValue, passwordValue) {
     console.log('Попытка входа:', loginValue, passwordValue); 
     const user = CLIENTS_DB.find(u => u.login === loginValue && u.password === passwordValue);   
     if (user) {
